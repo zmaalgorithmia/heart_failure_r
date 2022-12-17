@@ -1,0 +1,3 @@
+drum score -cd . --input ./dataset/heart_failure.csv \
+--target-type binary --positive-class-label 1 --negative-class-label 0 \
+--verbose >> ./drum/drum_score.log
