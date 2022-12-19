@@ -7,9 +7,9 @@
 # This is proprietary source code of DataRobot, Inc. and its affiliates.
 #
 # Released under the terms of DataRobot Tool and Utility Agreement.
-init <- function(...) {
-    library(glm2)
-}
+# init <- function(...) {
+#     library(glmnet)
+# }
 
 # read_input_data <- function(inupt_data){
 #     # dataFull = read.csv("heart_failure.csv", header=TRUE)
@@ -30,9 +30,9 @@ init <- function(...) {
 #     return(dataTest)
 # }
 
-# score <- function(data, model){
-#     pred.model <- predict(model, newdata = data, type = "response")
-#     predictions <- data.frame(pred.model, 1-pred.model)
-#     # colnames(predictions)<-c("1","0")
-#     return(predictions)
-# }
+score <- function(data, model){
+    pred.model <- predict(model, newdata = data, type = "response")
+    predictions <- data.frame(pred.model, 1-pred.model)
+    # colnames(predictions)<-c("1","0")
+    return(predictions)
+}
